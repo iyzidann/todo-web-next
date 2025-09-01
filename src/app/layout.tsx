@@ -19,16 +19,16 @@ export const metadata: Metadata = {
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
-      </body>
+    <html lang="id" className="dark">
+      <head>
+        <title>Todo App - Aplikasi Todo List Modern</title>
+        <meta name="description" content="Aplikasi todo list modern dengan fitur dark mode, multi bahasa, dan kalkulator." />
+      </head>
+      <body className="bg-black">{children}</body>
     </html>
   );
 }
